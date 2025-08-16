@@ -1,24 +1,44 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import NavMobile from './NavMobile';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { href: '#inicio', label: 'Inicio', active: true },
-    { href: '#servicios', label: 'Servicios', active: false },
-    { href: '#portafolio', label: 'Portafolio', active: false },
+    { href: '#proyectos', label: 'Servicios', active: false },
+    { href: '#sobre-mi', label: 'Portafolio', active: false },
     { href: '#contacto', label: 'Contacto', active: false },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroHeight = window.innerHeight * 0.7;
+      setIsScrolled(window.scrollY > heroHeight);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-14 md:h-16">
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8 h-full flex items-center justify-between">
+    <header className={`
+      fixed top-0 left-0 right-0 z-50 h-14 md:h-16 transition-all duration-300
+      ${isScrolled 
+        ? 'bg-white/95 backdrop-blur-sm border-b border-border-light shadow-sm' 
+        : 'bg-transparent'
+      }
+    `}>
+      <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8 h-full flex items-center justify-between">
         <a 
           href="#inicio" 
-          className="font-semibold text-sm tracking-tight text-white hover:text-white/80 transition-colors duration-150"
+          className={`
+            font-semibold text-sm tracking-tight transition-colors duration-300 hover:scale-105 transform
+            ${isScrolled ? 'text-text-primary hover:text-text-primary/80' : 'text-white hover:text-white/80'}
+          `}
         >
           DarioAchirica
         </a>
@@ -29,11 +49,17 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className={`text-[13px] transition-colors duration-150 ${
-                    item.active 
-                      ? 'text-white underline underline-offset-4 decoration-[1px]' 
-                      : 'text-white/70 hover:text-white/90'
-                  }`}
+                  className={`
+                    text-[13px] transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 transform inline-block
+                    ${item.active 
+                      ? isScrolled 
+                        ? 'text-text-primary underline underline-offset-4 decoration-[1px]'
+                        : 'text-white underline underline-offset-4 decoration-[1px]'
+                      : isScrolled
+                        ? 'text-text-secondary hover:text-text-primary'
+                        : 'text-white/70 hover:text-white/90'
+                    }
+                  `}
                 >
                   {item.label}
                 </a>
@@ -43,12 +69,15 @@ export default function Header() {
         </nav>
 
         <button
-          className="md:hidden text-white/70 hover:text-white transition-colors"
+          className={`
+            md:hidden transition-all duration-300 hover:scale-110 transform p-2 -m-2
+            ${isScrolled ? 'text-text-secondary hover:text-text-primary' : 'text-white/70 hover:text-white'}
+          `}
           onClick={() => setMobileMenuOpen(true)}
           aria-controls="mobile-menu"
           aria-expanded={mobileMenuOpen}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
             <line x1="4" x2="20" y1="6" y2="6" />
             <line x1="4" x2="20" y1="12" y2="12" />
             <line x1="4" x2="20" y1="18" y2="18" />

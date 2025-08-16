@@ -3,13 +3,15 @@ interface PlaceholderProps {
   ratio: '16/9' | '3/4' | '16/10' | 'square' | string;
   className?: string;
   isCircular?: boolean;
+  'aria-label'?: string;
 }
 
 export default function Placeholder({ 
   label = "Placeholder", 
   ratio, 
   className = "", 
-  isCircular = false 
+  isCircular = false,
+  'aria-label': ariaLabel
 }: PlaceholderProps) {
   const aspectClass = ratio === 'square' ? 'aspect-square' : 
                      ratio === '16/9' ? 'aspect-[16/9]' :
@@ -34,6 +36,13 @@ export default function Placeholder({
         text-sm
         relative
         overflow-hidden
+        transition-all
+        duration-300
+        hover:scale-105
+        hover:shadow-xl
+        hover:border-text-primary/20
+        cursor-pointer
+        group
         ${className}
       `}
       style={{
@@ -45,8 +54,10 @@ export default function Placeholder({
           rgba(156, 163, 175, 0.04) 20px
         )`
       }}
+      role="img"
+      aria-label={ariaLabel || label}
     >
-      <span className="z-10 px-4 text-center">
+      <span className="z-10 px-4 text-center transition-colors duration-300 group-hover:text-text-primary/80" aria-hidden="true">
         {label}
       </span>
     </div>

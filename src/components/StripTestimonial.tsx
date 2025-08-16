@@ -2,27 +2,27 @@ import Placeholder from './Placeholder';
 
 export default function StripTestimonial() {
   return (
-    <section className="bg-testimonial text-white py-16 md:py-20">
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8 text-center space-y-6">
-        <div className="text-white/80 text-lg tracking-[3px]">
+    <section className="bg-testimonial text-white py-12 md:py-16 lg:py-20">
+      <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8 text-center space-y-4 md:space-y-6">
+        <div className="text-white/80 text-base md:text-lg tracking-[3px]">
           ★★★★★
         </div>
         
-        <blockquote className="max-w-[720px] mx-auto space-y-2">
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+        <blockquote className="max-w-[720px] mx-auto space-y-1 md:space-y-2">
+          <p className="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed">
             Gracias a Darío, mi marca cobró vida. Su diseño multimedia
           </p>
-          <p className="text-white/90 text-lg md:text-xl leading-relaxed">
+          <p className="text-white/90 text-base md:text-lg lg:text-xl leading-relaxed">
             superó mis expectativas y su profesionalismo es incomparable.
           </p>
         </blockquote>
         
-        <div className="pt-4 flex items-center justify-center gap-3">
+        <div className="pt-3 md:pt-4 flex items-center justify-center gap-3">
           <Placeholder 
             label=""
             ratio="square"
             isCircular={true}
-            className="w-12 h-12 flex-shrink-0"
+            className="w-10 md:w-12 h-10 md:h-12 flex-shrink-0"
           />
           <cite className="text-white/70 text-sm not-italic">
             Ana Ruiz

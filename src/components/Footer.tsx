@@ -47,21 +47,21 @@ export default function Footer() {
   return (
     <footer 
       id="contacto"
-      className="bg-footer text-white py-14 md:py-18"
+      className="bg-footer text-white py-12 md:py-14 lg:py-18"
     >
-      <div className="mx-auto max-w-[1120px] px-6 md:px-8">
-        <div className="grid md:grid-cols-3 gap-y-8 md:gap-x-10">
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contacto</h3>
+      <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8">
+        <div className="grid md:grid-cols-3 gap-y-6 md:gap-y-8 md:gap-x-8 lg:gap-x-10">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="font-semibold text-base md:text-lg">Contacto</h3>
             <p className="text-white/90 text-sm leading-relaxed">
               Diseño multimedia y desarrollo de portafolios.
             </p>
-            <div className="flex items-center gap-4 pt-2">
+            <div className="flex items-center gap-3 md:gap-4 pt-1 md:pt-2">
               {socialIcons.map((social) => (
                 <a
                   key={social.name}
                   href="#"
-                  className="text-white/90 hover:text-white transition-colors duration-150"
+                  className="text-white/90 hover:text-white transition-colors duration-150 p-1"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -70,16 +70,16 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg tracking-wide">SERVICIOS</h3>
-            <div className="space-y-2 text-sm">
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="font-semibold text-base md:text-lg tracking-wide">SERVICIOS</h3>
+            <div className="space-y-1 md:space-y-2 text-sm">
               <p className="text-white/90">+34 612 346 678</p>
               <p className="text-white/90">info@darioachirica.com</p>
             </div>
           </div>
 
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg tracking-wide">REDES</h3>
+          <div className="space-y-3 md:space-y-4">
+            <h3 className="font-semibold text-base md:text-lg tracking-wide">REDES</h3>
             <form onSubmit={handleSubmit} className="space-y-3">
               <div>
                 <label htmlFor="newsletter-email" className="block text-sm font-medium mb-2">
@@ -89,13 +89,13 @@ export default function Footer() {
                   type="email"
                   id="newsletter-email"
                   placeholder="Introduce tu correo aquí"
-                  className="w-full h-11 px-4 bg-white text-text-primary border-0 rounded-lg focus:ring-2 focus:ring-white/20 focus:outline-none"
+                  className="w-full h-10 md:h-11 px-3 md:px-4 bg-white text-text-primary border-0 rounded-lg focus:ring-2 focus:ring-white/20 focus:outline-none text-sm"
                   autoComplete="email"
                 />
               </div>
               <button
                 type="submit"
-                className="h-10 px-6 bg-text-primary text-white text-sm font-medium rounded-full hover:bg-gray-800 transition-colors duration-150 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-white"
+                className="h-9 md:h-10 px-5 md:px-6 bg-text-primary text-white text-sm font-medium rounded-full hover:bg-gray-800 hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-white active:scale-95"
               >
                 Enviar consulta
               </button>
@@ -103,7 +103,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/20 mt-12 pt-6">
+        <div className="border-t border-white/20 mt-8 md:mt-10 lg:mt-12 pt-4 md:pt-6">
           <p className="text-white/60 text-sm text-center">
             © 2025. All rights reserved.
           </p>

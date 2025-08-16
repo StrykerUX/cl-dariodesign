@@ -2,14 +2,43 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #111827;
+  --text-secondary: #6B7280;
+  --border-light: #E5E7EB;
+  --button-dark: #111827;
+  --testimonial-bg: #161616;
+  --footer-coral: #E55B63;
+  --overlay-dark: rgba(0,0,0,0.65);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-border-light: #E5E7EB;
+  --color-button-dark: #111827;
+  --color-testimonial: #161616;
+  --color-footer: #E55B63;
+  --color-placeholder: #F3F4F6;
+  --color-placeholder-text: #9CA3AF;
+  
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  
+  --spacing-section-desktop: 128px;
+  --spacing-section-tablet: 72px;
+  --spacing-section-mobile: 56px;
+  --spacing-gutter-desktop: 80px;
+  --spacing-gutter-tablet: 40px;
+  --spacing-gutter-mobile: 24px;
+  
+  --radius-card: 16px;
+  --radius-button: 9999px;
+  
+  --shadow-image: 0 12px 40px rgba(0,0,0,0.08);
+  --shadow-card: 0 10px 30px rgba(0,0,0,0.06);
+  
+  --container-max: 1120px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +51,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

@@ -1,17 +1,23 @@
 import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import SectionProjects from '@/components/SectionProjects';
+import SectionExperience from '@/components/SectionExperience';
+import SectionAbout from '@/components/SectionAbout';
+import StripTestimonial from '@/components/StripTestimonial';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="min-h-screen bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-4xl font-bold mb-4">Portafolio de Dario Achirica</h1>
-            <p className="text-xl">Diseño Multimedia Creativo</p>
-          </div>
-        </section>
+        <Hero />
+        <SectionProjects />
+        <SectionExperience />
+        <SectionAbout />
+        <StripTestimonial />
       </main>
+      <Footer />
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = window.innerHeight * 0.7;
+      const heroHeight = window.innerHeight * 0.5;
       setIsScrolled(window.scrollY > heroHeight);
     };
 

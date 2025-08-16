@@ -4,14 +4,18 @@ interface PlaceholderProps {
   className?: string;
   isCircular?: boolean;
   'aria-label'?: string;
+  imageUrl?: string;
 }
+
+import Image from 'next/image';
 
 export default function Placeholder({ 
   label = "Placeholder", 
   ratio, 
   className = "", 
   isCircular = false,
-  'aria-label': ariaLabel
+  'aria-label': ariaLabel,
+  imageUrl
 }: PlaceholderProps) {
   const aspectClass = ratio === 'square' ? 'aspect-square' : 
                      ratio === '16/9' ? 'aspect-[16/9]' :
@@ -22,6 +26,36 @@ export default function Placeholder({
   const baseClasses = isCircular 
     ? "rounded-full flex items-center justify-center" 
     : "rounded-2xl flex items-center justify-center";
+
+  if (imageUrl) {
+    return (
+      <div 
+        className={`
+          ${aspectClass} 
+          ${baseClasses}
+          relative
+          overflow-hidden
+          transition-all
+          duration-300
+          hover:scale-105
+          hover:shadow-xl
+          cursor-pointer
+          group
+          ${className}
+        `}
+        role="img"
+        aria-label={ariaLabel || label}
+      >
+        <Image
+          src={imageUrl}
+          alt={ariaLabel || label}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-110"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
+      </div>
+    );
+  }
 
   return (
     <div 

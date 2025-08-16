@@ -22,10 +22,11 @@ export default function SectionExperience() {
         <div className="grid md:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-y-8 md:gap-x-10 lg:gap-x-20 items-start">
           <div className="md:order-1 order-2">
             <Placeholder 
-              label="Experience 840×1120"
+              label="Experiencia profesional - Workspace"
               ratio="3/4"
               className="w-full max-w-[520px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
               aria-label="Imagen representativa de experiencia profesional"
+              imageUrl="https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg"
             />
           </div>
           

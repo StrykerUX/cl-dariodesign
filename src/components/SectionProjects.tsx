@@ -6,13 +6,15 @@ export default function SectionProjects() {
       id: 1,
       title: "Diseño gráfico",
       description: "Aquí encontrarás ejemplos de mis proyectos de diseño gráfico, donde combino creatividad y técnica para ofrecer soluciones visuales impactantes.",
-      image: "Placeholder 1280×720"
+      image: "Diseño gráfico - Workspace creativo",
+      imageUrl: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
     },
     {
       id: 2,
       title: "Desarrollo web",
       description: "Mira mis proyectos de desarrollo web, donde diseño páginas atractivas y funcionales que destacan los servicios que ofrezco como freelancer.",
-      image: "Placeholder 1280×720"
+      image: "Desarrollo web - Código y tecnología",
+      imageUrl: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
     }
   ];
 
@@ -44,6 +46,7 @@ export default function SectionProjects() {
                   ratio="16/9"
                   className="w-full max-w-[560px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
                   aria-label={`Imagen de ejemplo del proyecto: ${project.title}`}
+                  imageUrl={project.imageUrl}
                 />
               </div>
               

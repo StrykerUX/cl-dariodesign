@@ -25,10 +25,11 @@ export default function SectionAbout() {
           
           <div className="md:order-2 order-2 relative">
             <Placeholder 
-              label="About 864×540"
+              label="Sobre mí - Perfil profesional"
               ratio="16/10"
               className="w-full max-w-[540px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
               aria-label="Imagen del perfil profesional de Dario Achirica"
+              imageUrl="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
             />
             
             <div className="absolute left-4 md:left-6 bottom-4 md:bottom-6 bg-white/95 border border-border-light rounded-xl p-3 md:p-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] max-w-[200px] md:max-w-[240px]">

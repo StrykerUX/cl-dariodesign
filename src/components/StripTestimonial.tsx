@@ -19,10 +19,12 @@ export default function StripTestimonial() {
         
         <div className="pt-3 md:pt-4 flex items-center justify-center gap-3">
           <Placeholder 
-            label=""
+            label="Avatar Ana Ruiz"
             ratio="square"
             isCircular={true}
             className="w-10 md:w-12 h-10 md:h-12 flex-shrink-0"
+            imageUrl="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+            aria-label="Foto de perfil de Ana Ruiz"
           />
           <cite className="text-white/70 text-sm not-italic">
             Ana Ruiz

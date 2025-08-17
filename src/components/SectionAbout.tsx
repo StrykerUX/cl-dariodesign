@@ -1,4 +1,5 @@
 import Placeholder from './Placeholder';
+import DepthEffect from './DepthEffect';
 
 export default function SectionAbout() {
   return (
@@ -11,13 +12,17 @@ export default function SectionAbout() {
         <div className="grid md:grid-cols-2 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] gap-y-8 md:gap-x-10 lg:gap-x-20 items-center">
           <div className="md:order-1 order-1 space-y-6 md:space-y-8">
             <div className="space-y-4 md:space-y-6">
-              <h2 id="sobre-mi-heading" className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary tracking-tight">
-                Sobre mí
-              </h2>
+              <DepthEffect type="heading" parallaxSpeed={0.1}>
+                <h2 id="sobre-mi-heading" className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary tracking-tight">
+                  Sobre mí
+                </h2>
+              </DepthEffect>
               
-              <p className="text-sm md:text-[15px] lg:text-base leading-relaxed text-text-secondary max-w-[560px]">
-                Soy un diseñador multimedia freelancer apasionado por crear soluciones visuales únicas que reflejan la esencia de mis clientes. Con años de experiencia en proyectos creativos, me especializo en desarrollar soluciones visuales efectivas que capturan la identidad de cada marca.
-              </p>
+              <DepthEffect type="text" parallaxSpeed={0.2}>
+                <p className="text-sm md:text-[15px] lg:text-base leading-relaxed text-text-secondary max-w-[560px]">
+                  Soy un diseñador multimedia freelancer apasionado por crear soluciones visuales únicas que reflejan la esencia de mis clientes. Con años de experiencia en proyectos creativos, me especializo en desarrollar soluciones visuales efectivas que capturan la identidad de cada marca.
+                </p>
+              </DepthEffect>
             </div>
 
             <div className="space-y-4 md:space-y-6">
@@ -58,13 +63,15 @@ export default function SectionAbout() {
           </div>
           
           <div className="md:order-2 order-2 relative">
-            <Placeholder 
-              label="Sobre mí - Perfil profesional"
-              ratio="4/5"
-              className="w-full max-w-[540px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
-              aria-label="Imagen del perfil profesional de Dario Achirica"
-              imageUrl="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
-            />
+            <DepthEffect type="image" parallaxSpeed={0.4}>
+              <Placeholder 
+                label="Sobre mí - Perfil profesional"
+                ratio="4/5"
+                className="w-full max-w-[540px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
+                aria-label="Imagen del perfil profesional de Dario Achirica"
+                imageUrl="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+              />
+            </DepthEffect>
             
             <div className="absolute left-4 md:left-6 bottom-4 md:bottom-6 bg-white/95 border border-border-light rounded-xl p-3 md:p-4 shadow-[0_10px_30px_rgba(0,0,0,0.06)] max-w-[200px] md:max-w-[240px]">
               <p className="font-semibold text-text-primary text-xs md:text-sm mb-1">

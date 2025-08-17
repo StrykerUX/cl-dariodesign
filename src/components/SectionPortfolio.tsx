@@ -1,4 +1,5 @@
 import Placeholder from './Placeholder';
+import DepthEffect from './DepthEffect';
 
 export default function SectionPortfolio() {
   const portfolioItems = [
@@ -40,18 +41,24 @@ export default function SectionPortfolio() {
     >
       <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8">
         <div className="mb-12 md:mb-16 lg:mb-20 text-center">
-          <h2 id="portafolio-heading" className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary mb-4 md:mb-6 tracking-tight">
-            Portafolio
-          </h2>
-          <p className="text-sm md:text-[15px] lg:text-base leading-relaxed text-text-secondary max-w-[600px] mx-auto">
-            Una selección de proyectos destacados que muestran mi experiencia en diseño multimedia y desarrollo digital.
-          </p>
+          <DepthEffect type="heading" parallaxSpeed={0.1}>
+            <h2 id="portafolio-heading" className="text-xl md:text-2xl lg:text-3xl font-bold text-text-primary mb-4 md:mb-6 tracking-tight">
+              Portafolio
+            </h2>
+          </DepthEffect>
+          <DepthEffect type="text" parallaxSpeed={0.2}>
+            <p className="text-sm md:text-[15px] lg:text-base leading-relaxed text-text-secondary max-w-[600px] mx-auto">
+              Una selección de proyectos destacados que muestran mi experiencia en diseño multimedia y desarrollo digital.
+            </p>
+          </DepthEffect>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
           {portfolioItems.map((item) => (
-            <div 
+            <DepthEffect 
               key={item.id}
+              type="image" 
+              parallaxSpeed={0.25 + (item.id * 0.05)}
               className="group cursor-pointer"
             >
               <div className="relative mb-4 md:mb-6">
@@ -73,15 +80,10 @@ export default function SectionPortfolio() {
                   {item.title}
                 </h3>
               </div>
-            </div>
+            </DepthEffect>
           ))}
         </div>
 
-        <div className="mt-12 md:mt-16 lg:mt-20 text-center">
-          <button className="inline-flex items-center justify-center h-10 md:h-12 px-6 md:px-8 border border-border-light text-text-primary text-sm md:text-base font-medium rounded-full hover:bg-text-primary hover:text-white hover:border-text-primary hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-text-primary active:scale-95">
-            Ver Todos los Proyectos
-          </button>
-        </div>
       </div>
     </section>
   );

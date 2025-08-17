@@ -9,8 +9,10 @@ export default function Header() {
 
   const navItems = [
     { href: '#inicio', label: 'Inicio', active: true },
-    { href: '#proyectos', label: 'Servicios', active: false },
-    { href: '#sobre-mi', label: 'Portafolio', active: false },
+    { href: '#sobre-mi', label: 'Sobre mí', active: false },
+    { href: '#servicios', label: 'Servicios', active: false },
+    { href: '#portafolio', label: 'Portafolio', active: false },
+    { href: '#testimonios', label: 'Testimonios', active: false },
     { href: '#contacto', label: 'Contacto', active: false },
   ];
 

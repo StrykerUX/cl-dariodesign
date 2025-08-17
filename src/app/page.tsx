@@ -1,9 +1,10 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import SectionProjects from '@/components/SectionProjects';
-import SectionExperience from '@/components/SectionExperience';
 import SectionAbout from '@/components/SectionAbout';
-import StripTestimonial from '@/components/StripTestimonial';
+import SectionServices from '@/components/SectionServices';
+import SectionPortfolio from '@/components/SectionPortfolio';
+import SectionTestimonials from '@/components/SectionTestimonials';
+import SectionContact from '@/components/SectionContact';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -12,10 +13,11 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <SectionProjects />
-        <SectionExperience />
         <SectionAbout />
-        <StripTestimonial />
+        <SectionServices />
+        <SectionPortfolio />
+        <SectionTestimonials />
+        <SectionContact />
       </main>
       <Footer />
     </div>

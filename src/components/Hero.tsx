@@ -1,8 +1,11 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function Hero() {
+  const [scrollY, setScrollY] = useState(0);
+
   const handleScrollToPortfolio = () => {
     const element = document.getElementById('portafolio');
     if (element) {
@@ -16,17 +19,32 @@ export default function Hero() {
       });
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    // Solo agregar el listener en el cliente
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   return (
     <section 
       id="inicio"
-      className="relative min-h-[90vh] flex items-center pt-16 md:pt-20 lg:pt-24"
+      className="relative min-h-[90vh] flex items-center pt-16 md:pt-20 lg:pt-24 overflow-hidden"
     >
-      <div className="absolute inset-0">
+      <div 
+        className="absolute inset-0 will-change-transform"
+        style={{
+          transform: `translateY(${scrollY * 0.5}px)`
+        }}
+      >
         <Image
           src="https://images.pexels.com/photos/3184657/pexels-photo-3184657.jpeg"
           alt="Background workspace - Diseño multimedia creativo"
           fill
-          className="object-cover"
+          className="object-cover scale-110"
           priority
           sizes="100vw"
         />

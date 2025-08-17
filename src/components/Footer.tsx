@@ -91,9 +91,40 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 mt-8 md:mt-10 lg:mt-12 pt-4 md:pt-6">
-          <p className="text-white/60 text-sm text-center">
-            © 2025. All rights reserved.
-          </p>
+          <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-2 md:gap-4">
+            <p className="text-white/60 text-sm text-center md:text-left">
+              © 2025. All rights reserved.
+            </p>
+            <p className="text-white/60 text-sm text-center order-first md:order-none">
+              <a 
+                href="https://novalabss.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-white/80 transition-all duration-300 inline-flex items-center gap-1 group"
+              >
+                ¿Quieres tu sitio web? Empecemos.
+                <svg 
+                  className="w-3 h-3 transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform duration-300" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 17l9.2-9.2M17 17V7H7" />
+                </svg>
+              </a>
+            </p>
+            <p className="text-white/60 text-sm text-center md:text-right">
+              Powered by{' '}
+              <a 
+                href="https://novalabss.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-white hover:text-white/80 transition-colors duration-200"
+              >
+                Novalabss
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>

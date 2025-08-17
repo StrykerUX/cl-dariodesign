@@ -16,6 +16,23 @@ export default function Header() {
     { href: '#contacto', label: 'Contacto', active: false },
   ];
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.replace('#', '');
+    const element = document.getElementById(targetId);
+    
+    if (element) {
+      const headerHeight = 64; // Height of fixed header
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const heroHeight = window.innerHeight * 0.5;
@@ -37,6 +54,7 @@ export default function Header() {
       <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8 h-full flex items-center justify-between">
         <a 
           href="#inicio" 
+          onClick={(e) => handleSmoothScroll(e, '#inicio')}
           className={`
             font-semibold text-sm tracking-tight transition-colors duration-300 hover:scale-105 transform
             ${isScrolled ? 'text-text-primary hover:text-text-primary/80' : 'text-white hover:text-white/80'}
@@ -51,6 +69,7 @@ export default function Header() {
               <li key={item.href}>
                 <a
                   href={item.href}
+                  onClick={(e) => handleSmoothScroll(e, item.href)}
                   className={`
                     text-[13px] transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 transform inline-block
                     ${item.active 
@@ -92,6 +111,7 @@ export default function Header() {
         open={mobileMenuOpen} 
         onClose={() => setMobileMenuOpen(false)}
         navItems={navItems}
+        onSmoothScroll={handleSmoothScroll}
       />
     </header>
   );

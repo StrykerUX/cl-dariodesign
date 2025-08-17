@@ -7,7 +7,7 @@
   --border-light: #E5E7EB;
   --button-dark: #111827;
   --testimonial-bg: #161616;
-  --footer-coral: #E55B63;
+  --footer-coral: #202020;
   --overlay-dark: rgba(0,0,0,0.65);
 }
 
@@ -19,7 +19,7 @@
   --color-border-light: #E5E7EB;
   --color-button-dark: #111827;
   --color-testimonial: #161616;
-  --color-footer: #E55B63;
+  --color-footer: #202020;
   --color-placeholder: #F3F4F6;
   --color-placeholder-text: #9CA3AF;
   
@@ -41,6 +41,10 @@
   --container-max: 1120px;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background: var(--background);

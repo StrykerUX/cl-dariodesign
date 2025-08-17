@@ -1,6 +1,6 @@
 interface PlaceholderProps {
   label?: string;
-  ratio: '16/9' | '3/4' | '16/10' | 'square' | string;
+  ratio: '16/9' | '3/4' | '16/10' | '4/5' | 'square' | string;
   className?: string;
   isCircular?: boolean;
   'aria-label'?: string;
@@ -20,7 +20,8 @@ export default function Placeholder({
   const aspectClass = ratio === 'square' ? 'aspect-square' : 
                      ratio === '16/9' ? 'aspect-[16/9]' :
                      ratio === '3/4' ? 'aspect-[3/4]' :
-                     ratio === '16/10' ? 'aspect-[16/10]' : 
+                     ratio === '16/10' ? 'aspect-[16/10]' :
+                     ratio === '4/5' ? 'aspect-[4/5]' :
                      `aspect-[${ratio}]`;
 
   const baseClasses = isCircular 

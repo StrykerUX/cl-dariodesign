@@ -1,10 +1,25 @@
+'use client';
+
 import Image from 'next/image';
 
 export default function Hero() {
+  const handleScrollToPortfolio = () => {
+    const element = document.getElementById('portafolio');
+    if (element) {
+      const headerHeight = 64;
+      const elementPosition = element.offsetTop;
+      const offsetPosition = elementPosition - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
   return (
     <section 
       id="inicio"
-      className="relative min-h-[72vh] lg:min-h-[72vh] md:min-h-[65vh] sm:min-h-[60vh] flex items-center pt-16 md:pt-20 lg:pt-24"
+      className="relative min-h-[90vh] flex items-center pt-16 md:pt-20 lg:pt-24"
     >
       <div className="absolute inset-0">
         <Image
@@ -31,7 +46,10 @@ export default function Hero() {
             Servicios de diseño a tu medida
           </p>
           
-          <button className="inline-flex items-center justify-center h-9 md:h-10 px-5 md:px-6 bg-white/96 text-text-primary text-sm font-medium rounded-full hover:bg-text-primary hover:text-white hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-text-primary active:scale-95">
+          <button 
+            onClick={handleScrollToPortfolio}
+            className="inline-flex items-center justify-center h-9 md:h-10 px-5 md:px-6 bg-white/96 text-text-primary text-sm font-medium rounded-full hover:bg-text-primary hover:text-white hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-text-primary active:scale-95"
+          >
             Ver Trabajos
           </button>
         </div>

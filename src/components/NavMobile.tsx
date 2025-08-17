@@ -10,9 +10,10 @@ interface NavMobileProps {
     label: string;
     active: boolean;
   }>;
+  onSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
 }
 
-export default function NavMobile({ open, onClose, navItems }: NavMobileProps) {
+export default function NavMobile({ open, onClose, navItems, onSmoothScroll }: NavMobileProps) {
   useEffect(() => {
     if (open) {
       document.body.style.overflow = 'hidden';
@@ -73,7 +74,10 @@ export default function NavMobile({ open, onClose, navItems }: NavMobileProps) {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  onClick={onClose}
+                  onClick={(e) => {
+                    onSmoothScroll(e, item.href);
+                    onClose();
+                  }}
                   className={`
                     block py-3 px-4 rounded-lg text-base transition-colors duration-150
                     ${item.active 

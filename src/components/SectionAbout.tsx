@@ -60,7 +60,7 @@ export default function SectionAbout() {
           <div className="md:order-2 order-2 relative">
             <Placeholder 
               label="Sobre mí - Perfil profesional"
-              ratio="16/10"
+              ratio="4/5"
               className="w-full max-w-[540px] shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
               aria-label="Imagen del perfil profesional de Dario Achirica"
               imageUrl="https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"

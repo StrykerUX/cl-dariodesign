@@ -12,9 +12,17 @@ export function useScrollEffects(options: UseScrollEffectsOptions = {}) {
   const { threshold = 0.1, rootMargin = '0px 0px -10% 0px', parallaxSpeed = 0.3 } = options;
   const [isVisible, setIsVisible] = useState(false);
   const [scrollY, setScrollY] = useState(0);
-  const elementRef = useRef<HTMLElement>(null);
+  const [isMounted, setIsMounted] = useState(false);
+  const elementRef = useRef<HTMLDivElement>(null);
+
+  // Hydration fix
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   useEffect(() => {
+    if (!isMounted) return;
+    
     const element = elementRef.current;
     if (!element) return;
 
@@ -48,7 +56,7 @@ export function useScrollEffects(options: UseScrollEffectsOptions = {}) {
       observer.disconnect();
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [threshold, rootMargin]);
+  }, [threshold, rootMargin, isMounted]);
 
   // Calcular valores para parallax diferencial
   const getParallaxOffset = (speed: number = parallaxSpeed) => {
@@ -57,8 +65,9 @@ export function useScrollEffects(options: UseScrollEffectsOptions = {}) {
 
   return {
     elementRef,
-    isVisible,
-    scrollY,
+    isVisible: isMounted ? isVisible : false,
+    scrollY: isMounted ? scrollY : 0,
     getParallaxOffset,
+    isMounted,
   };
 }

@@ -1,4 +1,4 @@
-import ChartPlaceholder from './ChartPlaceholder';
+import Image from 'next/image';
 
 export default function Hero() {
   return (
@@ -6,11 +6,18 @@ export default function Hero() {
       id="inicio"
       className="relative min-h-[72vh] lg:min-h-[72vh] md:min-h-[65vh] sm:min-h-[60vh] flex items-center pt-16 md:pt-20 lg:pt-24"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-600 via-slate-500 to-slate-400">
-        <ChartPlaceholder />
+      <div className="absolute inset-0">
+        <Image
+          src="https://images.pexels.com/photos/3184657/pexels-photo-3184657.jpeg"
+          alt="Background workspace - Diseño multimedia creativo"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-800/40 via-slate-700/30 to-transparent" />
+      <div className="absolute inset-0 bg-black/[0.66]" />
       
       <div className="relative z-10 mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8 w-full">
         <div className="max-w-[720px] pl-4 md:pl-[clamp(24px,6vw,80px)] lg:pl-[clamp(24px,8vw,80px)] space-y-4 md:space-y-5">

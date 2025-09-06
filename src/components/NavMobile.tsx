@@ -8,7 +8,6 @@ interface NavMobileProps {
   navItems: Array<{
     href: string;
     label: string;
-    active: boolean;
   }>;
   onSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
   isScrolled: boolean;
@@ -82,13 +81,7 @@ export default function NavMobile({ open, onClose, navItems, onSmoothScroll, isS
                     onSmoothScroll(e, item.href);
                     onClose();
                   }}
-                  className={`
-                    block py-3 px-4 rounded-lg text-base transition-colors duration-150 text-center
-                    ${item.active 
-                      ? 'text-text-primary bg-gray-50 font-medium' 
-                      : 'text-text-secondary hover:text-text-primary hover:bg-gray-50'
-                    }
-                  `}
+                  className="block py-3 px-4 rounded-lg text-base transition-colors duration-150 text-center text-text-secondary hover:text-text-primary hover:bg-gray-50"
                 >
                   {item.label}
                 </a>

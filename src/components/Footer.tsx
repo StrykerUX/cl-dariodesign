@@ -42,41 +42,29 @@ export default function Footer() {
     <footer 
       className="bg-footer text-white py-12 md:py-14 lg:py-18"
     >
-      <div className="mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-y-6 md:gap-y-8 md:gap-x-8 lg:gap-x-10">
-          <div className="space-y-3 md:space-y-4">
+      <div className="mx-auto max-w-[1120px] px-12 md:px-12 lg:px-8">
+        <div className="grid md:grid-cols-[0.6fr_0.6fr_0.6fr] gap-y-6 md:gap-y-8 md:gap-x-48 lg:gap-x-56">
+          <div className="space-y-3 md:space-y-4 text-center md:text-left">
             <h3 className="font-semibold text-base md:text-lg">Dario Achirica</h3>
             <p className="text-white/90 text-sm leading-relaxed">
-              Diseño multimedia y desarrollo de portafolios profesionales que impulsan tu presencia digital.
+              Diseño de posts para redes sociales y proyectos de marca básica.
             </p>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
+          <div className="space-y-3 md:space-y-4 text-center md:text-left">
             <h3 className="font-semibold text-base md:text-lg tracking-wide">Contacto</h3>
             <div className="space-y-1 md:space-y-2 text-sm">
-              <p className="text-white/90">+34 612 346 678</p>
-              <p className="text-white/90">info@darioachirica.com</p>
-              <p className="text-white/90">Madrid, España</p>
+              <p className="text-white/90">+52 56 1336 3963</p>
+              <p className="text-white/90">capdarii@gmail.com</p>
+              <p className="text-white/90">CDMX, México</p>
             </div>
           </div>
 
-          <div className="space-y-3 md:space-y-4">
-            <h3 className="font-semibold text-base md:text-lg tracking-wide">Sígueme</h3>
-            <div className="flex items-center gap-3 md:gap-4">
-              {socialIcons.map((social) => (
-                <a
-                  key={social.name}
-                  href="#"
-                  className="text-white/90 hover:text-white hover:scale-110 transition-all duration-200 p-1"
-                  aria-label={social.name}
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
-            <div className="mt-4">
+          <div className="space-y-3 md:space-y-4 text-center md:text-left">
+            <h3 className="font-semibold text-base md:text-lg tracking-wide">Hablemos</h3>
+            <div className="flex justify-center md:justify-start">
               <a 
-                href="https://wa.me/34612346678"
+                href="https://w.app/dqzu5w"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 text-sm transition-colors duration-200"

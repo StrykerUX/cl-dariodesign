@@ -13,8 +13,8 @@ export default function SectionContact() {
         </svg>
       ),
       title: "Email",
-      value: "info@darioachirica.com",
-      link: "mailto:info@darioachirica.com"
+      value: "capdarii@gmail.com",
+      link: "mailto:capdarii@gmail.com"
     },
     {
       icon: (
@@ -23,8 +23,8 @@ export default function SectionContact() {
         </svg>
       ),
       title: "Teléfono",
-      value: "+34 612 346 678",
-      link: "tel:+34612346678"
+      value: "+52 56 1336 3963",
+      link: "tel:+5256133639163"
     },
     {
       icon: (
@@ -34,7 +34,7 @@ export default function SectionContact() {
         </svg>
       ),
       title: "Ubicación",
-      value: "Madrid, España",
+      value: "CDMX, México",
       link: "#"
     }
   ];
@@ -92,7 +92,7 @@ export default function SectionContact() {
                 Respondo más rápido por WhatsApp. ¡Escríbeme directamente!
               </p>
               <a 
-                href="https://wa.me/34612346678"
+                href="https://w.app/dqzu5w"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-sm transition-colors duration-200"

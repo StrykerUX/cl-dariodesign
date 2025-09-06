@@ -4,30 +4,30 @@ export default function SectionTestimonials() {
   const testimonials = [
     {
       id: 1,
-      text: "Gracias a Darío, mi marca cobró vida. Su diseño multimedia superó mis expectativas y su profesionalismo es incomparable.",
-      author: "Ana Ruiz",
-      role: "CEO, Startup Digital",
-      project: "Identidad Visual Completa",
+      text: "Dario me ayudó a crear posts muy llamativos para mis redes sociales. Sus diseños son frescos y me han ayudado a conseguir más seguidores.",
+      author: "Sofía Mendez",
+      role: "Emprendedora",
+      project: "Posts para Instagram",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+      avatar: "https://images.pexels.com/photos/415263/pexels-photo-415263.jpeg"
     },
     {
       id: 2,
-      text: "El sitio web que desarrolló Dario transformó completamente nuestra presencia online. Las conversiones aumentaron un 300% en el primer mes.",
-      author: "Carlos Montenegro",
-      role: "Director de Marketing",
-      project: "Plataforma E-commerce",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+      text: "Necesitaba un logo simple para mi negocio local y Dario me hizo varias opciones geniales. Muy buena atención y precios justos.",
+      author: "Miguel Torres",
+      role: "Dueño de Cafetería",
+      project: "Logo básico",
+      rating: 4,
+      avatar: "https://images.pexels.com/photos/4603528/pexels-photo-4603528.jpeg"
     },
     {
       id: 3,
-      text: "Su capacidad para entender nuestras necesidades y traducirlas en soluciones visuales efectivas es excepcional. Altamente recomendado.",
-      author: "María José García",
-      role: "Fundadora",
-      project: "Campaña Digital 360°",
+      text: "Me encantó trabajar con Dario en el diseño de mis stories y posts. Tiene buenas ideas y es muy rápido entregando.",
+      author: "Laura Vásquez",
+      role: "Influencer",
+      project: "Contenido para redes",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+      avatar: "https://images.pexels.com/photos/30083656/pexels-photo-30083656.png"
     }
   ];
 
@@ -43,7 +43,7 @@ export default function SectionTestimonials() {
             Lo que dicen mis clientes
           </h2>
           <p className="text-sm md:text-[15px] lg:text-base leading-relaxed text-text-secondary max-w-[600px] mx-auto">
-            La satisfacción de mis clientes es mi mayor logro. Cada proyecto es una oportunidad de crear algo extraordinario juntos.
+            Testimonios reales de clientes que han confiado en mis diseños para sus redes sociales y proyectos de marca.
           </p>
         </div>
 
@@ -95,9 +95,14 @@ export default function SectionTestimonials() {
           <p className="text-sm md:text-base text-text-secondary mb-6">
             ¿Listo para ser el próximo cliente satisfecho?
           </p>
-          <button className="inline-flex items-center justify-center h-10 md:h-12 px-6 md:px-8 bg-text-primary text-white text-sm md:text-base font-medium rounded-full hover:bg-gray-800 hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-text-primary active:scale-95">
+          <a 
+            href="https://w.app/dqzu5w"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-10 md:h-12 px-6 md:px-8 bg-text-primary text-white text-sm md:text-base font-medium rounded-full hover:bg-gray-800 hover:-translate-y-0.5 hover:scale-105 hover:shadow-lg transform transition-all duration-300 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-text-primary active:scale-95"
+          >
             Iniciar mi Proyecto
-          </button>
+          </a>
         </div>
       </div>
     </section>

@@ -54,10 +54,10 @@ export default function Hero() {
       
       <div className="relative z-10 mx-auto max-w-[1120px] px-4 md:px-6 lg:px-8 w-full">
         <div className="max-w-[720px] pl-4 md:pl-[clamp(24px,6vw,80px)] lg:pl-[clamp(24px,8vw,80px)] space-y-4 md:space-y-5">
-          <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight tracking-[-0.01em]">
-            Portafolio de Dario<br className="hidden md:block" />
-            Achirica: Diseño<br className="hidden md:block" />
-            Multimedia Creativo
+          <h1 className="font-bold text-5xl md:text-7xl lg:text-8xl text-white leading-none tracking-[-0.01em]">
+            Diseño<br />
+            Multimedia<br />
+            Creativo
           </h1>
           
           <p className="text-white/80 text-base md:text-lg lg:text-xl font-medium">

@@ -9,6 +9,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/photos/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'storage.novalabss.app',
+        port: '',
+        pathname: '/u/**',
+      },
     ],
   },
 };

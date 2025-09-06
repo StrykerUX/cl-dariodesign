@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface NavMobileProps {
   open: boolean;
@@ -11,13 +11,21 @@ interface NavMobileProps {
     active: boolean;
   }>;
   onSmoothScroll: (e: React.MouseEvent<HTMLAnchorElement>, href: string) => void;
+  isScrolled: boolean;
 }
 
-export default function NavMobile({ open, onClose, navItems, onSmoothScroll }: NavMobileProps) {
+export default function NavMobile({ open, onClose, navItems, onSmoothScroll, isScrolled }: NavMobileProps) {
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [shouldRender, setShouldRender] = useState(false);
+
   useEffect(() => {
     if (open) {
+      setShouldRender(true);
+      setTimeout(() => setIsAnimating(true), 10);
       document.body.style.overflow = 'hidden';
     } else {
+      setIsAnimating(false);
+      setTimeout(() => setShouldRender(false), 300);
       document.body.style.overflow = 'unset';
     }
 
@@ -35,26 +43,22 @@ export default function NavMobile({ open, onClose, navItems, onSmoothScroll }: N
     };
   }, [open, onClose]);
 
-  if (!open) return null;
+  if (!shouldRender) return null;
 
   return (
-    <>
-      <div 
-        className="fixed inset-0 bg-black/50 z-40"
-        onClick={onClose}
-      />
-      <nav
-        id="mobile-menu"
-        role="dialog"
-        tabIndex={-1}
-        className={`
-          fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-white z-50
-          shadow-2xl rounded-l-xl
-          transform transition-transform duration-300 ease-out
-          ${open ? 'translate-x-0' : 'translate-x-full'}
-        `}
-      >
-        <div className="p-6 h-full flex flex-col">
+    <nav
+      id="mobile-menu"
+      role="dialog"
+      tabIndex={-1}
+      className={`
+        fixed top-0 left-0 right-0 bottom-0 w-screen h-screen z-[9999]
+        transform transition-transform duration-300 ease-out
+        ${isAnimating ? 'translate-x-0' : 'translate-x-full'}
+      `}
+      style={{ backgroundColor: 'white' }}
+      onClick={onClose}
+    >
+        <div className="p-6 h-full flex flex-col text-center" onClick={(e) => e.stopPropagation()}>
           <div className="flex items-center justify-between mb-8">
             <span className="font-semibold text-text-primary">Menú</span>
             <button
@@ -79,7 +83,7 @@ export default function NavMobile({ open, onClose, navItems, onSmoothScroll }: N
                     onClose();
                   }}
                   className={`
-                    block py-3 px-4 rounded-lg text-base transition-colors duration-150
+                    block py-3 px-4 rounded-lg text-base transition-colors duration-150 text-center
                     ${item.active 
                       ? 'text-text-primary bg-gray-50 font-medium' 
                       : 'text-text-secondary hover:text-text-primary hover:bg-gray-50'
@@ -92,7 +96,6 @@ export default function NavMobile({ open, onClose, navItems, onSmoothScroll }: N
             ))}
           </ul>
         </div>
-      </nav>
-    </>
+    </nav>
   );
 }

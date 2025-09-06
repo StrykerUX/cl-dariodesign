@@ -1,35 +1,37 @@
-import Placeholder from './Placeholder';
+import Image from 'next/image';
 import DepthEffect from './DepthEffect';
 
 export default function SectionPortfolio() {
-  const portfolioItems = [
+  const galleryImages = [
     {
       id: 1,
-      title: "Identidad Visual Corporativa",
-      category: "Branding & Diseño",
-      image: "Proyecto de identidad visual",
-      imageUrl: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
+      url: "https://storage.novalabss.app/u/Propuesta%203.jpg",
+      alt: "Propuesta de diseño 3"
     },
     {
       id: 2,
-      title: "Plataforma E-commerce",
-      category: "Desarrollo Web",
-      image: "Desarrollo e-commerce",
-      imageUrl: "https://images.pexels.com/photos/699459/pexels-photo-699459.jpeg"
+      url: "https://storage.novalabss.app/u/Logo%20Capture%20a%20color.jpg",
+      alt: "Logo Capture a color"
     },
     {
       id: 3,
-      title: "Campaña Digital 360°",
-      category: "Marketing Digital",
-      image: "Campaña digital integral",
-      imageUrl: "https://images.pexels.com/photos/3568521/pexels-photo-3568521.jpeg"
+      url: "https://storage.novalabss.app/u/Propuesta%201.jpg",
+      alt: "Propuesta de diseño 1"
     },
     {
       id: 4,
-      title: "App Móvil Corporativa",
-      category: "UX/UI Design",
-      image: "Diseño app móvil",
-      imageUrl: "https://images.pexels.com/photos/380769/pexels-photo-380769.jpeg"
+      url: "https://storage.novalabss.app/u/Post%20E6.jpg",
+      alt: "Post E6"
+    },
+    {
+      id: 5,
+      url: "https://storage.novalabss.app/u/Sorteo%20E6WIFI-2.jpeg",
+      alt: "Sorteo E6WIFI"
+    },
+    {
+      id: 6,
+      url: "https://storage.novalabss.app/u/Post%20A6F.jpg",
+      alt: "Post A6F"
     }
   ];
 
@@ -53,32 +55,23 @@ export default function SectionPortfolio() {
           </DepthEffect>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 lg:gap-10">
-          {portfolioItems.map((item) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
+          {galleryImages.map((image, index) => (
             <DepthEffect 
-              key={item.id}
+              key={image.id}
               type="image" 
-              parallaxSpeed={0.25 + (item.id * 0.05)}
+              parallaxSpeed={0.25 + (index * 0.05)}
               className="group cursor-pointer"
             >
-              <div className="relative mb-4 md:mb-6">
-                <Placeholder 
-                  label={item.image}
-                  ratio="16/10"
-                  className="w-full shadow-[0_12px_40px_rgba(0,0,0,0.08)] group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300"
-                  aria-label={`Imagen del proyecto: ${item.title}`}
-                  imageUrl={item.imageUrl}
+              <div className="relative aspect-square overflow-hidden rounded-2xl shadow-[0_12px_40px_rgba(0,0,0,0.08)] group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] transition-all duration-300">
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 rounded-2xl"></div>
-              </div>
-              
-              <div className="space-y-2">
-                <span className="text-xs md:text-sm font-medium text-text-secondary uppercase tracking-wide">
-                  {item.category}
-                </span>
-                <h3 className="text-lg md:text-xl font-semibold text-text-primary group-hover:text-text-primary/80 transition-colors duration-300">
-                  {item.title}
-                </h3>
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300"></div>
               </div>
             </DepthEffect>
           ))}

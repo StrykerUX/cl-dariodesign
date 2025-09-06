@@ -6,14 +6,15 @@ import NavMobile from './NavMobile';
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('inicio');
 
   const navItems = [
-    { href: '#inicio', label: 'Inicio', active: true },
-    { href: '#sobre-mi', label: 'Sobre mí', active: false },
-    { href: '#servicios', label: 'Servicios', active: false },
-    { href: '#portafolio', label: 'Portafolio', active: false },
-    { href: '#testimonios', label: 'Testimonios', active: false },
-    { href: '#contacto', label: 'Contacto', active: false },
+    { href: '#inicio', label: 'Inicio' },
+    { href: '#sobre-mi', label: 'Sobre mí' },
+    { href: '#servicios', label: 'Servicios' },
+    { href: '#portafolio', label: 'Portafolio' },
+    { href: '#testimonios', label: 'Testimonios' },
+    { href: '#contacto', label: 'Contacto' },
   ];
 
   const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -37,9 +38,24 @@ export default function Header() {
     const handleScroll = () => {
       const heroHeight = window.innerHeight * 0.5;
       setIsScrolled(window.scrollY > heroHeight);
+
+      const sections = ['inicio', 'sobre-mi', 'servicios', 'portafolio', 'testimonios', 'contacto'];
+      const headerHeight = 64;
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const sectionTop = section.offsetTop - headerHeight - 50;
+          if (window.scrollY >= sectionTop) {
+            setActiveSection(sections[i]);
+            break;
+          }
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -72,7 +88,7 @@ export default function Header() {
                   onClick={(e) => handleSmoothScroll(e, item.href)}
                   className={`
                     text-[13px] transition-all duration-300 hover:-translate-y-0.5 hover:scale-105 transform inline-block
-                    ${item.active 
+                    ${activeSection === item.href.replace('#', '')
                       ? isScrolled 
                         ? 'text-text-primary underline underline-offset-4 decoration-[1px]'
                         : 'text-white underline underline-offset-4 decoration-[1px]'
@@ -112,6 +128,7 @@ export default function Header() {
         onClose={() => setMobileMenuOpen(false)}
         navItems={navItems}
         onSmoothScroll={handleSmoothScroll}
+        isScrolled={isScrolled}
       />
     </header>
   );

@@ -1,0 +1,105 @@
+2025-09-03T02:55:20.652052Z  INFO tailwindcss_oxide::scanner: Provided sources:
+2025-09-03T02:55:20.652117Z  INFO tailwindcss_oxide::scanner: Source: PublicSourceEntry { base: "/home/strykerux/projects/novasites/cl-dariodesign", pattern: "**/*", negated: false }
+2025-09-03T02:55:20.652150Z  INFO tailwindcss_oxide::scanner: Optimized sources:
+2025-09-03T02:55:20.652154Z  INFO tailwindcss_oxide::scanner: Source: Auto { base: "/home/strykerux/projects/novasites/cl-dariodesign" }
+2025-09-03T02:55:20.652865Z  INFO scan_sources: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.653222Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src"
+2025-09-03T02:55:20.653325Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components"
+2025-09-03T02:55:20.653375Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionProjects.tsx"
+2025-09-03T02:55:20.653414Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/NavMobile.tsx"
+2025-09-03T02:55:20.653431Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/StripTestimonial.tsx"
+2025-09-03T02:55:20.653445Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Footer.tsx"
+2025-09-03T02:55:20.653459Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionAbout.tsx"
+2025-09-03T02:55:20.653472Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Hero.tsx"
+2025-09-03T02:55:20.653485Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionTestimonials.tsx"
+2025-09-03T02:55:20.653521Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Placeholder.tsx"
+2025-09-03T02:55:20.653539Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionPortfolio.tsx"
+2025-09-03T02:55:20.653554Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SimpleScrollEffect.tsx"
+2025-09-03T02:55:20.653567Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/DepthEffect.tsx"
+2025-09-03T02:55:20.653579Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionServices.tsx"
+2025-09-03T02:55:20.653591Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Header.tsx"
+2025-09-03T02:55:20.653630Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionContact.tsx"
+2025-09-03T02:55:20.653658Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/hooks"
+2025-09-03T02:55:20.653687Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/hooks/useScrollEffects.ts"
+2025-09-03T02:55:20.653736Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app"
+2025-09-03T02:55:20.653790Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app/layout.tsx"
+2025-09-03T02:55:20.653829Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app/page.tsx"
+2025-09-03T02:55:20.653848Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app/globals.css"
+2025-09-03T02:55:20.653887Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/next.config.ts"
+2025-09-03T02:55:20.653926Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/postcss.config.mjs"
+2025-09-03T02:55:20.653943Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/README.md"
+2025-09-03T02:55:20.653960Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/tsconfig.json"
+2025-09-03T02:55:20.653999Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public"
+2025-09-03T02:55:20.654033Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public/globe.svg"
+2025-09-03T02:55:20.654069Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public/next.svg"
+2025-09-03T02:55:20.654086Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public/window.svg"
+2025-09-03T02:55:20.654101Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public/vercel.svg"
+2025-09-03T02:55:20.654113Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public/file.svg"
+2025-09-03T02:55:20.654137Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/package.json"
+2025-09-03T02:55:20.654216Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/LICENSE"
+2025-09-03T02:55:20.654255Z  INFO scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/eslint.config.mjs"
+2025-09-03T02:55:20.654310Z  INFO scan_sources: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.654333Z  INFO extract_candidates: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.654347Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.654351Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 29 file(s)
+2025-09-03T02:55:20.656737Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionProjects.tsx"
+2025-09-03T02:55:20.656891Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/NavMobile.tsx"
+2025-09-03T02:55:20.656897Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/hooks/useScrollEffects.ts"
+2025-09-03T02:55:20.656987Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/StripTestimonial.tsx"
+2025-09-03T02:55:20.657069Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/public/globe.svg"
+2025-09-03T02:55:20.657124Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/next.config.ts"
+2025-09-03T02:55:20.657130Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/app/layout.tsx"
+2025-09-03T02:55:20.657221Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/public/next.svg"
+2025-09-03T02:55:20.657294Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/public/window.svg"
+2025-09-03T02:55:20.657315Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionPortfolio.tsx"
+2025-09-03T02:55:20.657354Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Hero.tsx"
+2025-09-03T02:55:20.657375Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Footer.tsx"
+2025-09-03T02:55:20.657386Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/public/file.svg"
+2025-09-03T02:55:20.657391Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/app/page.tsx"
+2025-09-03T02:55:20.657397Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/tsconfig.json"
+2025-09-03T02:55:20.657410Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Header.tsx"
+2025-09-03T02:55:20.657368Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/postcss.config.mjs"
+2025-09-03T02:55:20.657432Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/LICENSE"
+2025-09-03T02:55:20.657376Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/README.md"
+2025-09-03T02:55:20.657383Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionAbout.tsx"
+2025-09-03T02:55:20.657388Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/package.json"
+2025-09-03T02:55:20.657392Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/eslint.config.mjs"
+2025-09-03T02:55:20.657358Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/Placeholder.tsx"
+2025-09-03T02:55:20.657415Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionContact.tsx"
+2025-09-03T02:55:20.657364Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/public/vercel.svg"
+2025-09-03T02:55:20.657449Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SimpleScrollEffect.tsx"
+2025-09-03T02:55:20.657465Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionTestimonials.tsx"
+2025-09-03T02:55:20.657399Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/SectionServices.tsx"
+2025-09-03T02:55:20.657320Z  INFO tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/components/DepthEffect.tsx"
+2025-09-03T02:55:20.658207Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.658257Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.658267Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.660192Z  INFO extract_candidates:parse_all_blobs:extract: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.660245Z  INFO extract_candidates:parse_all_blobs: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.660254Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.660259Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading 1 file(s)
+2025-09-03T02:55:20.660284Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: Reading "/home/strykerux/projects/novasites/cl-dariodesign/src/app/globals.css"
+2025-09-03T02:55:20.660294Z  INFO extract_candidates:read_all_files: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.660298Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.660302Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.662226Z  INFO extract_candidates:extract_css_variables:extract: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.662270Z  INFO extract_candidates:extract_css_variables: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.667864Z  INFO extract_candidates: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.668466Z  INFO get_files: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.668510Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.668907Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src"
+2025-09-03T02:55:20.669007Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components"
+2025-09-03T02:55:20.669189Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/hooks"
+2025-09-03T02:55:20.669285Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app"
+2025-09-03T02:55:20.669418Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public"
+2025-09-03T02:55:20.669666Z  INFO get_files:scan_sources: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.671193Z  INFO get_files: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.671338Z  INFO get_globs: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.671365Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: enter
+2025-09-03T02:55:20.671698Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src"
+2025-09-03T02:55:20.671791Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/components"
+2025-09-03T02:55:20.671960Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/hooks"
+2025-09-03T02:55:20.672054Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/src/app"
+2025-09-03T02:55:20.672180Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: Discovering "/home/strykerux/projects/novasites/cl-dariodesign/public"
+2025-09-03T02:55:20.672392Z  INFO get_globs:scan_sources: tailwindcss_oxide::scanner: exit
+2025-09-03T02:55:20.673520Z  INFO get_globs: tailwindcss_oxide::scanner: exit
